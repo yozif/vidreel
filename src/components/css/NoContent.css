@@ -1,0 +1,22 @@
+.no-content {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.no-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.no-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.no-content img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
