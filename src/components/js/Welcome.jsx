@@ -13,11 +13,11 @@ const Welcome = () => {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&chart=mostPopular&key=AIzaSyA75wcIay-5GXOOkeCl7odxt3PkvDJLJIs&maxResults=10&order=date`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&chart=mostPopular&key=AIzaSyA75wcIay-5GXOOkeCl7odxt3PkvDJLJIs&maxResults=20&order=date`
         );
-        // decode amp; to &
+        // decode amp; to & and &#39; to '
         response.data.items = response.data.items.map((item) => {
-          item.snippet.title = item.snippet.title.replace(/&amp;/g, "&");
+          item.snippet.title = item.snippet.title.replace(/&amp;/g, "&").replace(/&#39;/g, "'");
           return item;
         });
         setLoading(false);
